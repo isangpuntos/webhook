@@ -48,10 +48,12 @@ restService.post('/booking', function(req, res) {
 			res.send(Booking.getTo());
 			break;
 		case "schedule2": 
-			res.send(Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date));
+		    var sched2 = Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
+			res.send(sched2);
 			break;
 		case "schedule2_2":
-			res.send(Booking.schedule2_2(req.body.travel_from, req.body.travel_to, req.body.depart_date));
+		    var sched2_2 = Booking.getSchedule2_2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
+			res.send(sched2_2);
 			break;
 	}
 });
