@@ -49,6 +49,9 @@ restService.post('/booking', function(req, res) {
 		case "schedule2": 
 			res.send(Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date));
 			break;
+		case "schedule2_2":
+			res.send(Booking.schedule2_2(req.body.travel_from, req.body.travel_to, req.body.depart_date));
+			break;
 	}
 });
 restService.post('/details', function(req, res) {

@@ -57,7 +57,7 @@ module.exports = {
     for (var i = 0; i < toArr.length; i++) {
          toList.push({          
               "title": toArr[i],
-                  "block_names": ["Date2"],
+                  "block_names": ["Date22"],
                   "set_attributes": 
                   {
                     "travel_to": toArr[i]
@@ -97,7 +97,54 @@ module.exports = {
                 };
 
     toJson.messages[0].quick_replies = toList;
+	console.log(toJson);
     return toJson;
+  },
+  
+  getSchedule2_2: function (travel_from, travel_to, departure) {
+	var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 AM", "2:50 AM", "4:45 PM"]; 
+
+    var deptTimeList = [];
+    for (var i = 0; i < deptTime.length; i++) {
+         deptTimeList.push({          
+              "title": deptTime[i],
+                  "block_names": ["Date2"],
+                  "set_attributes": 
+                  {
+                    "travel_to": deptTime[i]
+                  },
+         });
+    } 
+
+    /*fromList.push({          
+         "title": "NEXT>>",
+         "block_names": ["NEXT>>"],
+         "set_attributes": 
+          {
+              "travel_from": "NEXT>>"
+          },
+    });*/
+
+    var deptTimeJson = {
+                    "messages": [
+                        {
+                            "attachment": {
+                            "type": "template",
+                            "payload": {
+                                "template_type": "button",
+                                "text":  travel_to + " to " + travel_from + " Departure date: " + departure,
+                                "buttons": [
+                                
+                              ]
+                            }
+                          },
+                          "quick_replies": ""
+                        }
+                    ]
+                };
+
+    deptTimeJson.messages[0].quick_replies = deptTimeList;
+    return deptTimeJson;
   },
   
   getSchedule2: function (travel_from, travel_to, departure) {
