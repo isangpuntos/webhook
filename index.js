@@ -31,7 +31,7 @@ restService.use(bodyParser.json());
 
 
 //Main code here
-restService.post('/webhook', function(req, res) {
+restService.post('/booking', function(req, res) {
 
 });
 restService.post('/details', function(req, res) {
