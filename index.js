@@ -38,6 +38,7 @@ restService.use(bodyParser.json());
 
 //Main code here
 restService.post('/booking', function(req, res) {
+	console.log(req.body.booking);
 	switch(req.body.booking)
 	{
 		case "from": 

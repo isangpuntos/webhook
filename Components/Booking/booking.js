@@ -144,6 +144,7 @@ module.exports = {
                 };
 
     deptTimeJson.messages[0].quick_replies = deptTimeList;
+	console.log(deptTimeJson);
     return deptTimeJson;
   },
   
@@ -190,6 +191,7 @@ module.exports = {
                 };
 
     deptTimeJson.messages[0].quick_replies = deptTimeList;
+	console.log(deptTimeJson);
     return deptTimeJson;
   }
 };
