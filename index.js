@@ -1,11 +1,15 @@
 'use strict';
-import { getFrom,getDetails,getFaq} from './Components/index';
+//import { getFrom, getDetails, getFaq} from './Components/index';
 
 
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const restService = express();
+var Booking = require('./Components/Booking/booking.js');
+var Details = require('./Components/Details/details.js');
+var Faq = require('./Components/Faq/faq.js');
+
 //
 //const BOOKING_SEARCH = 'booking/search';
 //const BOOKING_ROUND = 'booking/search';
@@ -34,10 +38,15 @@ restService.use(bodyParser.json());
 
 //Main code here
 restService.post('/booking', function(req, res) {
-	var fromStr = getFrom();
-	console.log(fromStr);
-	if(req.body.booking === "from")
-		res.send(fromStr);
+	switch(req.body.booking)
+	{
+		case "from": 
+			res.send(Booking.getFrom());
+			break;
+		case "to": 
+			res.send(Booking.getTo());
+			break;
+	}
 });
 restService.post('/details', function(req, res) {
 
