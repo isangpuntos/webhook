@@ -34,7 +34,10 @@ restService.use(bodyParser.json());
 
 //Main code here
 restService.post('/booking', function(req, res) {
-
+	var fromStr = getFrom();
+	console.log(fromStr);
+	if(req.body.booking === "from")
+		res.send(fromStr);
 });
 restService.post('/details', function(req, res) {
 
