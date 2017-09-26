@@ -1,5 +1,5 @@
 'use strict';
-import { getBookings,getDetails,getFaq} from './Components/index';
+import { getFrom,getDetails,getFaq} from './Components/index';
 
 
 const express = require('express');
