@@ -191,6 +191,7 @@ module.exports = {
                 };
 
     deptTimeJson.messages[0].quick_replies = deptTimeList;
+	console.log(travel_from + " to " + travel_to + " Departure date: " + departure);
 	console.log(deptTimeJson);
     return deptTimeJson;
   }
