@@ -49,10 +49,12 @@ restService.post('/booking', function(req, res) {
 			break;
 		case "schedule2": 
 		    var sched2 = Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
+			console.log("sched2: " + sched2);
 			res.send(sched2);
 			break;
 		case "schedule2_2":
 		    var sched2_2 = Booking.getSchedule2_2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
+			console.log("sched2: " + sched2_2);
 			res.send(sched2_2);
 			break;
 	}
