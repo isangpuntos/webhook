@@ -147,7 +147,7 @@ module.exports = {
     return deptTimeJson;
   },
   
-  getSchedule2: function (travel_from, travel_to, departure) {
+  getSchedule2_2: function (travel_from, travel_to, departure) {
 	var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 AM", "2:50 AM", "4:45 PM"]; 
 
     var deptTimeList = [];
