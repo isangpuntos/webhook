@@ -108,6 +108,7 @@ module.exports = {
     for (var i = 0; i < deptTime.length; i++) {
          deptTimeList.push({          
                 "title": deptTime[i],
+                "block_names": [],
                 "set_attributes": 
                 {
                   "depart_time": deptTime[i]
@@ -153,11 +154,12 @@ module.exports = {
     var deptTimeList = [];
     for (var i = 0; i < deptTime.length; i++) {
          deptTimeList.push({          
-            "title": deptTime[i],
-			"set_attributes": 
-			{
-			"return_time": deptTime[i]
-			},
+                "title": deptTime[i],
+                "block_names": [],
+		"set_attributes": 
+		{
+		   "return_time": deptTime[i]
+		},
          });
     } 
 
