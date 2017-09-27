@@ -109,26 +109,17 @@ getSchedule2: function (travel_from, travel_to, departure) {
          deptTimeList.push({          
                 "title": deptTime[i],
                 "block_names": [],
-		"set_attributes": 
-		{
-		   "return_time": deptTime[i]
-		},
+				"set_attributes": 
+				{
+				   "return_time": deptTime[i]
+				},
          });
     } 
 
     var deptTimeJson = {
                     "messages": [
                         {
-                            "attachment": {
-                            "type": "template",
-                            "payload": {
-                                "template_type": "button",
-                                "text": text,
-                                "buttons": [
-                                
-                              ]
-                            }
-                          },
+                          "text": text,
                           "quick_replies": ""
                         }
                     ]
@@ -147,35 +138,17 @@ getSchedule2_2: function (travel_from, travel_to, departure) {
          deptTimeList.push({          
                 "title": deptTime[i],
                 "block_names": [],
-		"set_attributes": 
-		{
-		   "return_time": deptTime[i]
-		},
+				"set_attributes": 
+				{
+				   "return_time": deptTime[i]
+				},
          });
     } 
-
-    /*fromList.push({          
-         "title": "NEXT>>",
-         "block_names": ["NEXT>>"],
-         "set_attributes": 
-          {
-              "travel_from": "NEXT>>"
-          },
-    });*/
 
     var deptTimeJson = {
                     "messages": [
                         {
-                            "attachment": {
-                            "type": "template",
-                            "payload": {
-                                "template_type": "button",
-                                "text": text,
-                                "buttons": [
-                                
-                              ]
-                            }
-                          },
+                          "text": text,
                           "quick_replies": ""
                         }
                     ]
