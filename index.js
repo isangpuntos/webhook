@@ -11,12 +11,14 @@ var Details = require('./Components/Details/details.js');
 var Faq = require('./Components/Faq/faq.js');
 
 //
-//const BOOKING_SEARCH = 'booking/search';
-//const BOOKING_ROUND = 'booking/search';
-//const BOOKING_ONEWAY = 'booking/search';
-//const BOOKING_FROM = 'booking/search';
-//const BOOKING_TO = 'booking/search';
-//const BOOKING_DATE2 = 'booking/search';
+const BOOKING_SEARCH = 'search';
+const BOOKING_ROUND = 'round';
+const BOOKING_ONEWAY = 'oneway';
+const BOOKING_FROM = 'from';
+const BOOKING_TO = 'to';
+const BOOKING_DATE2 = 'date2';
+const BOOKING_SCHEDULE2 = 'schedule2';
+const BOOKING_SCHEDULE2_2 = 'schedule2_2';
 //
 //
 //const DETAILS_CONTACT_INFO = 'details/contactInfo';
@@ -41,22 +43,22 @@ restService.post('/booking', function(req, res) {
 	console.log(req.body.booking);
 	switch(req.body.booking)
 	{
-		case "from": 
-                        var src = Booking.getFrom();
-                        console.log(src);
+		case BOOKING_FROM:
+            var src = Booking.getFrom();
+            console.log(src);
 			res.send(src);
 			break;
-		case "to": 
-                        var dest = Booking.getTo();
-                        console.log(dest);
+		case BOOKING_TO:
+            var dest = Booking.getTo();
+            console.log(dest);
 			res.send(dest);
 			break;
-		case "schedule2": 
+		case BOOKING_SCHEDULE2:
 		    var sched2 = JSON.parse(Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date));
 			console.log("sched2: " + sched2);
 			res.send(sched2);
 			break;
-		case "schedule2_2":
+		case BOOKING_SCHEDULE2_2:
 		    var sched2_2 = Booking.getSchedule2_2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
 			console.log("sched2: " + sched2_2);
 			res.send(sched2_2);
