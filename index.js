@@ -18,7 +18,7 @@ const BOOKING_FROM = 'from';
 const BOOKING_TO = 'to';
 const BOOKING_DATE2 = 'date2';
 const BOOKING_SCHEDULE2 = 'schedule2';
-const BOOKING_SCHEDULE2_2 = 'schedule2_2';
+const BOOKING_SCHEDULE2_2 = 'schedule2-2';
 //
 //
 //const DETAILS_CONTACT_INFO = 'details/contactInfo';
