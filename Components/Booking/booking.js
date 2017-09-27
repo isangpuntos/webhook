@@ -146,7 +146,7 @@ getSchedule2: function (travel_from, travel_to, departure) {
 
     deptTimeJson.messages[0].quick_replies = deptTimeList;
     console.log(deptTimeJson);
-    return deptTimeJson;
+    return JSON.stringify(deptTimeJson);
   },
   
 getSchedule2_2: function (travel_from, travel_to, departure) {
