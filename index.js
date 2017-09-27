@@ -42,10 +42,14 @@ restService.post('/booking', function(req, res) {
 	switch(req.body.booking)
 	{
 		case "from": 
-			res.send(Booking.getFrom());
+                        var src = Booking.getFrom();
+                        console.log(src);
+			res.send(src);
 			break;
 		case "to": 
-			res.send(Booking.getTo());
+                        var dest = Booking.getTo();
+                        console.log(dest);
+			res.send(dest);
 			break;
 		case "schedule2": 
 		    var sched2 = Booking.getSchedule2(req.body.travel_from, req.body.travel_to, req.body.depart_date);
