@@ -17,8 +17,11 @@ const BOOKING_ONEWAY = 'oneway';
 const BOOKING_FROM = 'from';
 const BOOKING_TO = 'to';
 const BOOKING_DATE2 = 'date2';
+const BOOKING_SCHEDULE1 = 'schedule1';
 const BOOKING_SCHEDULE2 = 'schedule2';
 const BOOKING_SCHEDULE2_2 = 'schedule2-2';
+const BOOKING_ACCOM2 = 'accom2';
+const BOOKING_ACCOM2_2 = 'accom2-2';
 //
 //
 //const DETAILS_CONTACT_INFO = 'details/contactInfo';
@@ -53,6 +56,11 @@ restService.post('/booking', function(req, res) {
             console.log(dest);
 			res.send(dest);
 			break;
+		case BOOKING_SCHEDULE1:
+		    var sched1 = Booking.getSchedule2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString());
+			console.log(sched1);
+			res.send(sched1);
+			break;
 		case BOOKING_SCHEDULE2:
 		    var sched2 = Booking.getSchedule2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString());
 			console.log(sched2);
@@ -62,6 +70,21 @@ restService.post('/booking', function(req, res) {
 		    var sched2_2 = Booking.getSchedule2_2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString() );
 			console.log(sched2_2);
 			res.send(sched2_2);
+			break;
+		case BOOKING_ACCOM1:
+		    var accom1 = Booking.getAccomodation2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString(), req.body.depart_time.toString(), req.body.for_depart.toString());
+			console.log(accom1);
+			res.send(accom1);
+			break;
+		case BOOKING_ACCOM2:
+		    var accom2 = Booking.getAccomodation2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString(), req.body.depart_time.toString(), req.body.for_depart.toString());
+			console.log(accom2);
+			res.send(accom2);
+			break;
+		case BOOKING_ACCOM2_2:
+		    var accom2_2 = Booking.getAccomodation2_2(req.body.for_depart.toString());
+			console.log(accom2_2);
+			res.send(accom2_2);
 			break;
 	}
 });

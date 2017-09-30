@@ -157,6 +157,180 @@ getSchedule2_2: function (travel_from, travel_to, departure) {
     deptTimeJson.messages[0].quick_replies = deptTimeList;
     console.log(deptTimeJson);
     return deptTimeJson;
+  },
+  
+getAccomodation2: function (travel_from, travel_to, depart_time, depart_date, for_depart) {
+    var message = travel_from + " to " + travel_to + " Departure date: " + depart_date + " Departure Time: " + depart_time;
+	
+	if(for_depart === "false") {
+		message = travel_to + " to " + travel_from + " Departure date: " + depart_date + " Departure Time: " + depart_time;
+	
+		var company = {
+			  "messages": [	{
+				  "attachment": {
+					"type": "template",
+					"payload": {
+					    "template_type": "button",
+					    "text": message,
+					    "buttons": [
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Weesam Express",
+									"set_attributes" : {
+										"company" : "Weesam Express"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Medallion Transport Inc",
+									"set_attributes" : {
+										"company" : "Medallion Transport Inc"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Trans Asia Shipping Lines",
+									"set_attributes" : {
+										"company" : "Trans Asia Shipping Lines"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Lite Ferries",
+									"set_attributes" : {
+										"company" : "Lite Ferries"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "George and peter lines, Inc",
+									"set_attributes" : {
+										"company" : "George and peter lines, Inc"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Jomalia Shipping Corporation",
+									"set_attributes" : {
+										"company" : "Jomalia Shipping Corporation"
+									}
+								}
+					        ]
+					    }
+				    }
+				}
+			]
+		}
+	} else {
+		var company = {
+			  "messages": [	{
+				  "attachment": {
+					"type": "template",
+					"payload": {
+					    "template_type": "button",
+					    "text": message,
+					    "buttons": [
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Weesam Express",
+									"set_attributes" : {
+										"company2" : "Weesam Express"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Medallion Transport Inc",
+									"set_attributes" : {
+										"company2" : "Medallion Transport Inc"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Trans Asia Shipping Lines",
+									"set_attributes" : {
+										"company2" : "Trans Asia Shipping Lines"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Lite Ferries",
+									"set_attributes" : {
+										"company2" : "Lite Ferries"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "George and peter lines, Inc",
+									"set_attributes" : {
+										"company2" : "George and peter lines, Inc"
+									}
+								},
+								{
+									"type": "show_block",
+									"block_names": [],
+									"title": "Jomalia Shipping Corporation",
+									"set_attributes" : {
+										"company2" : "Jomalia Shipping Corporation"
+									}
+								}
+					        ]
+					    }
+				    }
+				}
+			]
+		}
+	}
+	return company;
+  },	
+
+getAccomodation2_2: function (for_depart) {
+    var acommOptions = ["Economy: 220","Tourist: 250","First Class: 320"]; 
+    var acommOptionsList = [];
+    for (var i = 0; i < acommOptions.length; i++) {
+         if(for_depart === "true") {
+			 acommOptionsList.push({          
+					"title": acommOptions[i],
+					"block_names": [],
+					"set_attributes": 
+					{
+					   "depart_accom": acommOptions[i]
+					},
+			 });
+		 } else {
+		 	acommOptionsList.push({          
+					"title": acommOptions[i],
+					"block_names": [],
+					"set_attributes": 
+					{
+					   "return_accom": acommOptions[i]
+					},
+			 });
+		 }
+    } 
+
+    var acommOptionsJson = {
+                    "messages": [
+                        {
+                          "text": "Choose from the following: ",
+                          "quick_replies": ""
+                        }
+                    ]
+                };
+
+    acommOptionsJson.messages[0].quick_replies = acommOptionsList;
+    console.log(acommOptionsJson);
+    return acommOptionsJson;
   }
 };
 
