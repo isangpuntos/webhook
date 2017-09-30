@@ -78,6 +78,7 @@ restService.post('/booking', function(req, res) {
 			res.send(accom1);
 			break;
 		case BOOKING_ACCOM2:
+		    console.log(req);
 		    var accom2 = Booking.getAccomodation2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString(), req.body.depart_time.toString(), req.body.for_depart.toString());
 			console.log(accom2);
 			res.send(accom2);

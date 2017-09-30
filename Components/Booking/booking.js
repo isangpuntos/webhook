@@ -159,7 +159,7 @@ getSchedule2_2: function (travel_from, travel_to, departure) {
     return deptTimeJson;
   },
   
-getAccomodation2: function (travel_from, travel_to, depart_time, depart_date, for_depart) {
+getAccomodation2: function (travel_from, travel_to, depart_date, depart_time, for_depart) {
     var message = travel_from + " to " + travel_to + " Departure date: " + depart_date + " Departure Time: " + depart_time;
 	
 	if(for_depart === "true") {
