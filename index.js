@@ -21,6 +21,7 @@ const BOOKING_SCHEDULE1 = 'schedule1';
 const BOOKING_SCHEDULE2 = 'schedule2';
 const BOOKING_SCHEDULE2_2 = 'schedule2-2';
 const BOOKING_ACCOM1 = 'accom1';
+const BOOKING_ACCOM1_2 = 'accom1-2';
 const BOOKING_ACCOM2 = 'accom2';
 const BOOKING_ACCOM2_2 = 'accom2-2';
 //
@@ -77,8 +78,12 @@ restService.post('/booking', function(req, res) {
 			console.log(accom1);
 			res.send(accom1);
 			break;
+		case BOOKING_ACCOM1_2:
+		    var accom1_2 = Booking.getAccomodation2_2(req.body.for_depart.toString());
+			console.log(accom1_2);
+			res.send(accom1_2);
+			break;
 		case BOOKING_ACCOM2:
-		    console.log(req);
 		    var accom2 = Booking.getAccomodation2(req.body.travel_from.toString() , req.body.travel_to.toString() , req.body.depart_date.toString(), req.body.depart_time.toString(), req.body.for_depart.toString());
 			console.log(accom2);
 			res.send(accom2);
