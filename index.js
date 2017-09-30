@@ -20,6 +20,7 @@ const BOOKING_DATE2 = 'date2';
 const BOOKING_SCHEDULE1 = 'schedule1';
 const BOOKING_SCHEDULE2 = 'schedule2';
 const BOOKING_SCHEDULE2_2 = 'schedule2-2';
+const BOOKING_ACCOM1 = 'accom1';
 const BOOKING_ACCOM2 = 'accom2';
 const BOOKING_ACCOM2_2 = 'accom2-2';
 //
