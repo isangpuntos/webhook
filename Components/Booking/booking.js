@@ -162,134 +162,108 @@ getSchedule2_2: function (travel_from, travel_to, departure) {
 getAccomodation2: function (travel_from, travel_to, depart_time, depart_date, for_depart) {
     var message = travel_from + " to " + travel_to + " Departure date: " + depart_date + " Departure Time: " + depart_time;
 	
-	if(for_depart === "false") {
+	if(for_depart === "true") {
 		message = travel_to + " to " + travel_from + " Departure date: " + depart_date + " Departure Time: " + depart_time;
 	
 		var company = {
 			  "messages": [	{
-				  "attachment": {
-					"type": "template",
-					"payload": {
-					    "template_type": "button",
-					    "text": message,
-					    "buttons": [
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Weesam Express",
-									"set_attributes" : {
-										"company" : "Weesam Express"
+					"text": message,
+					"quick_replies" : [ {
+										"block_names": [],
+										"title": "Weesam Express",
+										"set_attributes" : {
+											"company" : "Weesam Express"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Medallion Transport Inc",
+										"set_attributes" : {
+											"company" : "Medallion Transport Inc"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Trans Asia Shipping Lines",
+										"set_attributes" : {
+											"company" : "Trans Asia Shipping Lines"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Lite Ferries",
+										"set_attributes" : {
+											"company" : "Lite Ferries"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "George and peter lines, Inc",
+										"set_attributes" : {
+											"company" : "George and peter lines, Inc"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Jomalia Shipping Corporation",
+										"set_attributes" : {
+											"company" : "Jomalia Shipping Corporation"
+										}
 									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Medallion Transport Inc",
-									"set_attributes" : {
-										"company" : "Medallion Transport Inc"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Trans Asia Shipping Lines",
-									"set_attributes" : {
-										"company" : "Trans Asia Shipping Lines"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Lite Ferries",
-									"set_attributes" : {
-										"company" : "Lite Ferries"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "George and peter lines, Inc",
-									"set_attributes" : {
-										"company" : "George and peter lines, Inc"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Jomalia Shipping Corporation",
-									"set_attributes" : {
-										"company" : "Jomalia Shipping Corporation"
-									}
-								}
-					        ]
-					    }
-				    }
-				}
-			]
-		}
+								]
+							}
+						]
+					}
 	} else {
 		var company = {
 			  "messages": [	{
-				  "attachment": {
-					"type": "template",
-					"payload": {
-					    "template_type": "button",
-					    "text": message,
-					    "buttons": [
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Weesam Express",
-									"set_attributes" : {
-										"company2" : "Weesam Express"
+					"text": message,
+					"quick_replies" : [ {
+										"block_names": [],
+										"title": "Weesam Express",
+										"set_attributes" : {
+											"company2" : "Weesam Express"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Medallion Transport Inc",
+										"set_attributes" : {
+											"company2" : "Medallion Transport Inc"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Trans Asia Shipping Lines",
+										"set_attributes" : {
+											"company2" : "Trans Asia Shipping Lines"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Lite Ferries",
+										"set_attributes" : {
+											"company2" : "Lite Ferries"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "George and peter lines, Inc",
+										"set_attributes" : {
+											"company2" : "George and peter lines, Inc"
+										}
+									},
+									{
+										"block_names": [],
+										"title": "Jomalia Shipping Corporation",
+										"set_attributes" : {
+											"company2" : "Jomalia Shipping Corporation"
+										}
 									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Medallion Transport Inc",
-									"set_attributes" : {
-										"company2" : "Medallion Transport Inc"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Trans Asia Shipping Lines",
-									"set_attributes" : {
-										"company2" : "Trans Asia Shipping Lines"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Lite Ferries",
-									"set_attributes" : {
-										"company2" : "Lite Ferries"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "George and peter lines, Inc",
-									"set_attributes" : {
-										"company2" : "George and peter lines, Inc"
-									}
-								},
-								{
-									"type": "show_block",
-									"block_names": [],
-									"title": "Jomalia Shipping Corporation",
-									"set_attributes" : {
-										"company2" : "Jomalia Shipping Corporation"
-									}
-								}
-					        ]
-					    }
-				    }
-				}
-			]
-		}
+								]
+							}
+						]
+					}
 	}
 	return company;
   },	
