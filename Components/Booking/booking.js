@@ -102,7 +102,7 @@ var Booking = {
   },
   
 getSchedule2: function (travel_from, travel_to, departure) {
-    var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 AM", "2:50 AM", "4:45 PM"]; 
+    var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 PM", "2:50 PM", "4:45 PM"]; 
     var text = (travel_to + " to " + travel_from + " Departure date: " + departure);
     var deptTimeList = [];
     for (var i = 0; i < deptTime.length; i++) {
@@ -131,7 +131,7 @@ getSchedule2: function (travel_from, travel_to, departure) {
   },
   
 getSchedule2_2: function (travel_from, travel_to, departure) {
-    var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 AM", "2:50 AM", "4:45 PM"]; 
+    var deptTime = ["6:30 AM", "8:10 AM", "9:50 AM", "11:30 AM", "1:10 PM", "2:50 PM", "4:45 PM"]; 
     var text = (travel_from + " to " + travel_to + " Departure date: " + departure);
     var deptTimeList = [];
     for (var i = 0; i < deptTime.length; i++) {
@@ -296,7 +296,7 @@ getAccomodation2_2: function (for_depart) {
     var acommOptionsJson = {
                     "messages": [
                         {
-                          "text": "Choose from the following: ",
+                          "text": "Choose from the following class: ",
                           "quick_replies": ""
                         }
                     ]
